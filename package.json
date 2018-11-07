@@ -1,0 +1,23 @@
+{
+  "name": "test-response-objects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:default": "tsc -p classdojo/tsconfig.json",
+    "build:dojo": "tsc -p ts-default/tsconfig.json",
+    "build": "npm run build:dojo && npm run build:default",
+    "start:js": "node nodejs/ro-js.js",
+    "start:default": "node ts-default/ro-ts.js",
+    "start:dojo": "node classdojo/ro-ts.js",
+    "prestart": "npm run build",
+    "start": "npm run start:js && npm run start:default && npm run start:dojo"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "response-objects": "https://github.com/vfernandestoptal/response-objects#fix_exports_maybe_vitor",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.6"
+  }
+}
